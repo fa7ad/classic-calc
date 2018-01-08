@@ -1,0 +1,17 @@
+.App.calc {
+  grid-area: calc;
+  color: var(--white);
+  background-color: var(--grey);
+  box-shadow: 0 0 15px var(--grey);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 2fr repeat(5, 1fr);
+  grid-template-areas:
+    "scr src src src"
+    "clr div mul min"
+    "one two three add"
+    "four five six add"
+    "seven eight nine eql"
+    "zero zero dot eql";
+}

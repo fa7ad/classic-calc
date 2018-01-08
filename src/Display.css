@@ -11,4 +11,7 @@
 .display {
   font-family: 'DS-Digital', monospace;
   font-size: 48px;
+  grid-area: scr;
+  background-color: rgb(199, 204, 179);
+  color: var(--grey);
 }

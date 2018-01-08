@@ -10,22 +10,12 @@ body {
 }
 
 #root {
-  --margin: 1fr;
-  --width: 480px;
-  --height: 640px;
   height: 100vh;
   display: grid;
-  grid-template-columns: var(--margin) var(--width) var(--margin);
-  grid-template-rows: var(--margin) var(--height) var(--margin);
+  grid-template-columns: 1fr 480px 1fr;
+  grid-template-rows: 1fr 720px 1fr;
   grid-template-areas:
   ". . ."
   ". calc ."
   ". . .";
-}
-
-.calc {
-  grid-area: calc;
-  color: var(--white);
-  background-color: var(--grey);
-  box-shadow: 0 0 15px var(--grey);
 }
