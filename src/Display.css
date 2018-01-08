@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'DS-Digital';
+  src:  url('fonts/DS-Digital.ttf.woff') format('woff'),
+    url('fonts/DS-Digital.ttf.svg#DS-Digital') format('svg'),
+    url('fonts/DS-Digital.ttf.eot'),
+    url('fonts/DS-Digital.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+.display {
+  font-family: 'DS-Digital', monospace;
+  font-size: 48px;
+}
