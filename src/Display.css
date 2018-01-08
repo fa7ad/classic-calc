@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'DS-Digital';
-  src:  url('fonts/DS-Digital.ttf.woff') format('woff'),
-    url('fonts/DS-Digital.ttf.svg#DS-Digital') format('svg'),
-    url('fonts/DS-Digital.ttf.eot'),
-    url('fonts/DS-Digital.ttf.eot?#iefix') format('embedded-opentype'); 
+  src:  url('fonts/DS-Digital.woff') format('woff'),
+    url('fonts/DS-Digital.svg#DS-Digital') format('svg'),
+    url('fonts/DS-Digital.eot'),
+    url('fonts/DS-Digital.eot?#iefix') format('embedded-opentype'); 
   font-weight: normal;
   font-style: normal;
 }
