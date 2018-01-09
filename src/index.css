@@ -22,16 +22,29 @@
 body {
   margin: 0;
   background: url(img/pattern.png) repeat;
-  
 }
 
 #root {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 480px 1fr;
-  grid-template-rows: 1fr 720px 1fr;
   grid-template-areas:
-  ". . ."
-  ". calc ."
-  ". . .";
+    ".   .   ."
+    ". calcu ."
+    ".   .   .";
+  grid-template-rows: auto 90vh auto;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+}
+
+.warning {
+  display: none;
+}
+
+@media (max-width: 359px) {
+  #root {
+    display: none;
+  }
+  .warning {
+    display: block;
+  }
 }

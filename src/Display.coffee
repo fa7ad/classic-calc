@@ -7,7 +7,7 @@ class Display extends Component
     {children, memory} = @props
     <div className="display">
       <div className="memory">{memory}</div>
-      <div className="screen">{children}</div>
+      <input type="text" className="screen" value={children}/>
     </div>
 
 export default Display

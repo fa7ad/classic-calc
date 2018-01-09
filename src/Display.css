@@ -10,23 +10,24 @@
 
 .display {
   grid-area: scr;
-  font-size: 48px;
-  font-family: 'DS-Digital', monospace;
-  text-align: right;
-
   color: var(--grey);
   background-color: var(--llgrey);
   border: 10px solid var(--grey);
 
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   grid-template-rows: 30% 70%;
+
+  font-size: 2em;
 }
 
 .display .memory {
   color: var(--lgrey);
+  font-family: monospace;
 }
 
 .display .screen {
-  font-size: 1.5em;
+  font-size: 4em;
+  font-family: 'DS-Digital', monospace;
+  text-align: right;
 }
