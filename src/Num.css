@@ -1,0 +1,21 @@
+.number {
+  --bg: var(--dark);
+  background-color: var(--bg);
+  margin: 10px;
+  font-size: 5em;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  color: var(--white);
+  outline: none;
+}
+
+.number:hover {
+  --bg: var(--red);
+  outline: none;
+}
+
+.number:active {
+  --bg: var(--maroon);
+  outline: none;
+}

@@ -1,0 +1,21 @@
+.action {
+  --bg: var(--orange);
+  background-color: var(--bg);
+  margin: 10px;
+  font-size: 5em;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  color: var(--white);
+  outline: none;
+}
+
+.action:hover {
+  --bg: var(--red);
+  outline: none;
+}
+
+.action:active {
+  --bg: var(--yellow);
+  outline: none;
+}

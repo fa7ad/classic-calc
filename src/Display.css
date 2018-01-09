@@ -9,9 +9,24 @@
 }
 
 .display {
-  font-family: 'DS-Digital', monospace;
-  font-size: 48px;
   grid-area: scr;
-  background-color: rgb(199, 204, 179);
+  font-size: 48px;
+  font-family: 'DS-Digital', monospace;
+  text-align: right;
+
   color: var(--grey);
+  background-color: var(--llgrey);
+  border: 10px solid var(--grey);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30% 70%;
+}
+
+.display .memory {
+  color: var(--lgrey);
+}
+
+.display .screen {
+  font-size: 1.5em;
 }

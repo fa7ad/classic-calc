@@ -4,8 +4,10 @@ import './Display.css'
 
 class Display extends Component
   render: ->
+    {children, memory} = @props
     <div className="display">
-      123
+      <div className="memory">{memory}</div>
+      <div className="screen">{children}</div>
     </div>
 
 export default Display
