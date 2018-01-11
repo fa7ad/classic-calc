@@ -27,82 +27,51 @@ class App extends Component
       <Action className="clr" onTap={@reset}> C </Action>
       {(<Num className={n} key={n} onTap={@pushNum}>{i}</Num> for n,i in nums)}
       <Num className="dot" onTap={@pushNum}>.</Num>
-      <Action className="div" onTap={@div}> &divide; </Action>
-      <Action className="mul" onTap={@mult}> &times; </Action>
-      <Action className="min" onTap={@minus}> &minus; </Action>
-      <Action className="add" onTap={@add}> + </Action>
+      <Action className="div" val='/' onTap={@op}> &divide; </Action>
+      <Action className="mul" val='*' onTap={@op}> &times; </Action>
+      <Action className="min" val='-' onTap={@op}> &minus; </Action>
+      <Action className="add" val='+' onTap={@op}> + </Action>
       <Action className="eql" onTap={@eql}> = </Action>
     </div>
 
+  componentDidMount: -> window.addEventListener 'keydown', (e) =>
+    if /=|Enter|Return/.test e.key
+      do @eql
+    else if /[0-9]/.test e.key
+      @pushNum e.key
+    else if e.key is '.'
+      @pushNum '.'
+    else if /\+|-|\*|\//.test e.key
+      @op e.key
+    else if e.key is 'Delete'
+      do @reset
+    else if e.key is 'Backspace'
+      @setState (p) -> curr: p.curr[...-1]
+    else
+      false
+
   pushNum: (num) =>
-    if num is '.' and '.' in @state.curr
+    if num is '.' and '.' in @state.curr.join('')
       return
     if @state.curr.length > 9
       return
     @setState (p) -> curr: p.curr.concat num
 
-  add: =>
-    @setState (p) ->
-      pprev = p.prev
-      curr = p.curr
-      if curr.length < 1
-        curr = [0]
-      if pprev.length > 0
-        res = m.eval(pprev.concat(curr).join '')
-        prev = [res, '+']
-      else
-        prev = [curr.join(''), '+']
-      {prev, curr: []}
+  op: (v) => @setState (p) ->
+    [pprev, curr] = [p.prev, p.curr]
+    if curr.length < 1
+      curr = if v is '+' or v is '-' then [0] else [1]
+    if pprev.length > 0
+      res = m.eval pprev.concat(curr).join ''
+      prev = [res, v]
+    else
+      prev = [curr.join(''), v]
+    {prev, curr: []}
 
-  minus: =>
-    @setState (p) ->
-      pprev = p.prev
-      curr = p.curr
-      if curr.length < 1
-        curr = [0]
-      if pprev.length > 0
-        res = m.eval(pprev.concat(curr).join '')
-        prev = [res, '-']
-      else
-        prev = [curr.join(''), '-']
-      {prev, curr: []}
-
-  mult: =>
-    @setState (p) ->
-      pprev = p.prev
-      curr = p.curr
-      if curr.length < 1
-        curr = [1]
-      if pprev.length > 0
-        res = m.eval(pprev.concat(curr).join '')
-        prev = [res, '*']
-      else
-        prev = [curr.join(''), '*']
-      {prev, curr: []}
-
-  div: =>
-    @setState (p) ->
-      pprev = p.prev
-      curr = p.curr
-      if curr.length < 1
-        curr = [1]
-      if pprev.length > 0
-        res = m.eval(pprev.concat(curr).join '')
-        prev = [res, '/']
-      else
-        prev = [curr.join(''), '/']
-      {prev, curr: []}
-
-  eql: =>
-    @setState (p) ->
-      c = ''
-      {prev, curr} = p
-      [prev, curr] = [prev.join(''), curr.join('')]
-      if curr is ''
-        c = prev.slice 0, -1
-      else
-        c = m.eval prev + curr
-      {curr: [c], prev:[]}
+  eql: => @setState (p) ->
+    [prev, curr] = [p.prev.join(''), p.curr.join('')]
+    c = if not curr then prev[...-1] else m.eval "#{prev}#{curr}"
+    {curr: [m.format(c, 9)], prev:[]}
 
   reset: =>
     @setState curr: [], prev: []
