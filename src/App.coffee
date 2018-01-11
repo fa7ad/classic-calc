@@ -35,7 +35,7 @@ class App extends Component
     </div>
 
   componentDidMount: -> window.addEventListener 'keydown', (e) =>
-    if /=|Enter|Return/.test e.key
+    if /\=|Enter|Return/.test e.key
       do @eql
     else if /[0-9]/.test e.key
       @pushNum e.key
@@ -47,8 +47,7 @@ class App extends Component
       do @reset
     else if e.key is 'Backspace'
       @setState (p) -> curr: p.curr[...-1]
-    else
-      false
+
 
   pushNum: (num) =>
     if num is '.' and '.' in @state.curr.join('')
