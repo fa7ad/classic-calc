@@ -23,14 +23,7 @@ class App extends Component
 
   render: ->
     <div className="App calc">
-      <Display
-        memory={@state.prev.join ''}
-        onChange={(e) =>
-          do e.preventDefault
-          {target: {value}} = e
-          @setState curr: Array.from(value)
-        }
-      >{@state.curr.join ''}</Display>
+      <Display memory={@state.prev.join ''}>{@state.curr.join ''}</Display>
       <Action className="clr" onTap={@reset}> C </Action>
       {(<Num className={n} key={n} onTap={@pushNum}>{i}</Num> for n,i in nums)}
       <Num className="dot" onTap={@pushNum}>.</Num>
@@ -106,7 +99,7 @@ class App extends Component
       {prev, curr} = p
       [prev, curr] = [prev.join(''), curr.join('')]
       if curr is ''
-        c = prev[0..-1]
+        c = prev.slice 0, -1
       else
         c = m.eval prev + curr
       {curr: [c], prev:[]}
