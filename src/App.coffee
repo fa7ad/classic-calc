@@ -37,7 +37,7 @@ class App extends Component
   componentDidMount: -> window.addEventListener 'keydown', (e) =>
     if /\=|Enter|Return/.test e.key
       do @eql
-    else if /[0-9]/.test e.key
+    else if /^[0-9]/.test e.key
       @pushNum e.key
     else if e.key is '.'
       @pushNum '.'
