@@ -1,13 +1,11 @@
 .App.calc {
   font-size: 10px;
   height: 100%;
-
   grid-area: calcu;
   color: var(--white);
   background-color: var(--grey);
   border: 5px solid var(--grey);
   box-shadow: 0 0 15px var(--grey);
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 2fr repeat(5, 1fr);
@@ -25,34 +23,77 @@
     max-width: 480px;
   }
 }
+
 @media (max-width: 480px) {
   .App.calc {
     font-size: 8px;
   }
 }
 
+.one {
+  grid-area: one;
+}
 
-.one{grid-area: one;} .two{grid-area: two;} .three {grid-area: three;}
-.four {grid-area: four;} .five {grid-area: five;} .six {grid-area: six;}
-.seven {grid-area: seven;} .eight {grid-area: eight;} .nine {grid-area: nine;}
-.zero {grid-area: zero;} .dot{grid-area: dot;}
+.two {
+  grid-area: two;
+}
 
-.eql{
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.dot {
+  grid-area: dot;
+}
+
+.eql {
   grid-area: eql;
 }
-.div{
+
+.div {
   grid-area: div;
 }
-.mul{
+
+.mul {
   grid-area: mul;
 }
-.add{
+
+.add {
   grid-area: add;
 }
-.min{
+
+.min {
   grid-area: min;
 }
 
-.clr{
+.clr {
   grid-area: clr;
 }
