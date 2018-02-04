@@ -17,6 +17,9 @@
     "seven eight nine eql"
     "zero zero dot eql";
 }
+.App.calc .display {
+  grid-area: scr;
+}
 
 @media (min-width: 480px) {
   .App.calc {
