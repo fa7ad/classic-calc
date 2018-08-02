@@ -1,0 +1,226 @@
+:root {
+  --navy: #001f3f;
+  --blue: #0074D9;
+  --aqua: #7FDBFF;
+  --teal: #39CCCC;
+  --olive: #3D9970;
+  --green: #2ECC40;
+  --lime: #01FF70;
+  --yellow: #FFDC00;
+  --orange: #FF851B;
+  --red: #FF4136;
+  --maroon: #85144b;
+  --fuchsia: #F012BE;
+  --purple: #B10DC9;
+  --dark: #111;
+  --grey: #333;
+  --lgrey: #AAAAAA;
+  --llgrey: #DDDDDD;
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  background: url(pattern.923726b7.png) repeat;
+}
+
+#root {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    ".   .   ."
+    ". calcu ."
+    ".   .   .";
+  grid-template-rows: auto 90vh auto;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+}
+
+.warning {
+  display: none;
+}
+
+@media (max-width: 359px) {
+  #root {
+    display: none;
+  }
+  .warning {
+    display: block;
+  }
+}.App.calc {
+  font-size: 10px;
+  height: 100%;
+  grid-area: calcu;
+  color: var(--white);
+  background-color: var(--grey);
+  border: 5px solid var(--grey);
+  box-shadow: 0 0 15px var(--grey);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 2fr repeat(5, 1fr);
+  grid-template-areas:
+    "scr scr scr scr"
+    "clr div mul min"
+    "one two three add"
+    "four five six add"
+    "seven eight nine eql"
+    "zero zero dot eql";
+}
+.App.calc .display {
+  grid-area: scr;
+}
+
+@media (min-width: 480px) {
+  .App.calc {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App.calc {
+    font-size: 8px;
+  }
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.dot {
+  grid-area: dot;
+}
+
+.eql {
+  grid-area: eql;
+}
+
+.div {
+  grid-area: div;
+}
+
+.mul {
+  grid-area: mul;
+}
+
+.add {
+  grid-area: add;
+}
+
+.min {
+  grid-area: min;
+}
+
+.clr {
+  grid-area: clr;
+}
+@font-face {
+  font-family: 'DS-Digital';
+  src:  url('DS-Digital.cf254734.woff') format('woff'),
+    url('DS-Digital.e84aa363.svg#DS-Digital') format('svg'),
+    url('DS-Digital.f7784f05.eot'),
+    url('DS-Digital.f7784f05.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+.display {
+  grid-area: scr;
+  color: var(--grey);
+  background-color: var(--llgrey);
+  border: 10px solid var(--grey);
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 70%;
+
+  font-size: 2em;
+}
+
+.display .memory {
+  color: var(--lgrey);
+  font-family: 'DS-Digital', monospace;
+  font-size: 2em;
+}
+
+.display .screen {
+  font-size: 4em;
+  font-family: 'DS-Digital', monospace;
+  text-align: right;
+}
+.number {
+  --bg: var(--dark);
+  background-color: var(--bg);
+  margin: 10px;
+  font-size: 5em;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  color: var(--white);
+  outline: none;
+}
+
+.number:hover {
+  --bg: var(--red);
+  outline: none;
+}
+
+.number:active {
+  --bg: var(--maroon);
+  outline: none;
+}.action {
+  --bg: var(--orange);
+  background-color: var(--bg);
+  margin: 10px;
+  font-size: 5em;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  color: var(--white);
+  outline: none;
+}
+
+.action:hover {
+  --bg: var(--red);
+  outline: none;
+}
+
+.action:active {
+  --bg: var(--yellow);
+  outline: none;
+}
