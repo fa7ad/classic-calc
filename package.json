@@ -8,12 +8,12 @@
   "private": true,
   "repository": "git@github.com:fa7ad/classic-calc.git",
   "dependencies": {
-    "mathjs": "^3.19.0",
+    "mathjs": "^5.0.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
-    "autoprefixer": "^7.2.4",
+    "autoprefixer": "^9.0.2",
     "babel-preset-react-app": "^3.1.1",
     "babel-runtime": "^6.26.0",
     "coffeescript": "^2.1.1",

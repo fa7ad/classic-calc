@@ -23,7 +23,8 @@
 
 .display .memory {
   color: var(--lgrey);
-  font-family: monospace;
+  font-family: 'DS-Digital', monospace;
+  font-size: 2em;
 }
 
 .display .screen {

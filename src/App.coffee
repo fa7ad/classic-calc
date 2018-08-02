@@ -49,12 +49,18 @@ class App extends Component
       @setState (p) -> curr: p.curr[...-1]
 
 
-  pushNum: (num) =>
+  pushNum: (num) => @setState (p) ->
+    {curr} = p
     if num is '.' and '.' in @state.curr.join('')
       return
+    if @state.curr.length is 1 and @state.curr[0] is 0
+      if num is 0
+        return
+      else
+        curr = []
     if @state.curr.length > 9
       return
-    @setState (p) -> curr: p.curr.concat num
+    curr: curr.concat num
 
   op: (v) => @setState (p) ->
     [pprev, curr] = [p.prev, p.curr]
@@ -70,6 +76,7 @@ class App extends Component
   eql: => @setState (p) ->
     [prev, curr] = [p.prev.join(''), p.curr.join('')]
     c = if not curr then prev[...-1] else m.eval "#{prev}#{curr}"
+    c = if not prev and not curr then 0 else c
     {curr: [m.format(c, 9)], prev:[]}
 
   reset: =>
