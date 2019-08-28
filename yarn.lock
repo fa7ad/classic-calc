@@ -2710,9 +2710,9 @@ math-expression-evaluator@^1.2.14:
   version "1.2.17"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.17.tgz#de819fdbcd84dccd8fae59c6aeb79615b9d266ac"
 
-mathjs@^6.0.3:
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/mathjs/-/mathjs-6.0.3.tgz#3d9e4a8ace012fa3c2078bb3ca1237374fa03136"
+mathjs@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/mathjs/-/mathjs-6.2.0.tgz#9f86e12b8c4eca895f98a52ecb858ae2da9279ad"
   dependencies:
     complex.js "2.0.11"
     decimal.js "10.2.0"
@@ -2721,7 +2721,7 @@ mathjs@^6.0.3:
     javascript-natural-sort "0.7.1"
     seed-random "2.2.0"
     tiny-emitter "2.1.0"
-    typed-function "1.1.0"
+    typed-function "1.1.1"
 
 md5.js@^1.3.4:
   version "1.3.4"
@@ -4498,9 +4498,9 @@ type-check@~0.3.2:
   dependencies:
     prelude-ls "~1.1.2"
 
-typed-function@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/typed-function/-/typed-function-1.1.0.tgz#ea149706e0fb42aca1791c053a6d94ccd6c4fdcb"
+typed-function@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/typed-function/-/typed-function-1.1.1.tgz#a1316187ec3628c9e219b91ca96918660a10138e"
 
 typedarray@^0.0.6:
   version "0.0.6"
