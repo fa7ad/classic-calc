@@ -13,7 +13,7 @@
     "react-dom": "^16.11.0"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.1",
+    "autoprefixer": "^9.7.3",
     "babel-preset-react-app": "^9.1.0",
     "babel-runtime": "^6.26.0",
     "coffeescript": "^2.4.1",
