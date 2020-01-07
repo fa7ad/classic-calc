@@ -8,7 +8,7 @@
   "private": true,
   "repository": "git@github.com:fa7ad/classic-calc.git",
   "dependencies": {
-    "mathjs": "^6.3.0",
+    "mathjs": "^6.4.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },

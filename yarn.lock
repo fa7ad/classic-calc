@@ -3069,9 +3069,9 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-mathjs@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/mathjs/-/mathjs-6.3.0.tgz#e9c62df7fd6a57ea709b6cceba06a3c858628b80"
+mathjs@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/mathjs/-/mathjs-6.4.0.tgz#9af4bd1d1a0fbc1f294c0eaf0840fcd50bd9426b"
   dependencies:
     complex.js "2.0.11"
     decimal.js "10.2.0"
