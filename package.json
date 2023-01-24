@@ -2,31 +2,25 @@
   "name": "classic-calc",
   "version": "1.0.0",
   "description": "An everyday calculator, nothing special",
-  "main": "index.html",
   "author": "Fahad Hossain <8bit.demoncoder@gmail.com> (https://fa7ad.github.io/)",
   "license": "MIT",
+  "type": "module",
   "private": true,
   "repository": "git@github.com:fa7ad/classic-calc.git",
   "dependencies": {
-    "mathjs": "^7.5.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.0"
+    "mathjs": "^11.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
-    "babel-preset-react-app": "^9.1.2",
-    "babel-runtime": "^6.26.0",
-    "coffeescript": "^2.5.1",
-    "cross-env": "^7.0.2",
-    "parcel-bundler": "^1.12.4"
-  },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
+    "@vitejs/plugin-react-swc": "^3.0.1",
+    "coffeescript": "^2.7.0",
+    "cross-env": "^7.0.3",
+    "gh-pages": "^5.0.0",
+    "vite": "^4.0.4"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development parcel index.html ",
-    "build": "cross-env NODE_ENV=production parcel build index.html  --public-url=./"
+    "start": "cross-env NODE_ENV=development vite",
+    "build": "cross-env NODE_ENV=production vite build"
   }
 }
